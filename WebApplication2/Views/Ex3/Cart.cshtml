@@ -1,0 +1,31 @@
+﻿@model WebApplication2.Models.ShoppingCart
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+</head>
+<body>
+    <div>
+        <h2>Shopping Cart Details</h2>
+        @if(Model != null)
+        {
+         <ul>
+        <li>@Model.CartId</li>
+        <li>@Model.ItemName</li>
+        <li>@Model.ItemType</li>
+        <li>@Model.Price</li>
+        </ul>
+        }
+        else
+        {
+        <p>No Cart Item Exists</p>
+        }
+    </div>
+</body>
+</html>
